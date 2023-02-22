@@ -33,10 +33,10 @@ let button4 = document.getElementById("kakuna");
 
 function buttonAlert4() {
   alert(
-    "Kakuna is a Bug/Poison type Pokémon introduced in Generation 1 . It is known as the Cocoon Pokémon"
+    "Kakuna is a Bug Poison type Pokemon introduced in Generation one . It is known as the Cocoon Pokemon"
   );
 }
-button4.addEventListener("click", buttonAlert);
+button4.addEventListener("click", buttonAlert4);
 
 //alert button for Ratata
 let button5 = document.getElementById("ratata");
