@@ -1,3 +1,6 @@
+##GitHub Page
+##### click [HERE](https://armanpartovi.github.io/Midcourse-project---Build-your-own-Pokedex/)
+
 ### Build your own Pokedex
 In this midcourse project, you'll need to build a pokedex like the one we show in the image below. For that, you´ll need to create from scratch the HTML that will shape each one of the Pokemon cards, style them accordingly and create the necessary scripts to iterate over your stored pokemons and display them on screen. With this project, you're going to have the chance to put into practice all that you've learnt so far.
 Your task is to help Ash Ketchum from Paleta Town to develop the rest of the application so he can track the count of how many Pokemon has he captured so far. In order to do that, you'll need to:
