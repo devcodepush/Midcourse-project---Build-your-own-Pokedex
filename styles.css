@@ -6,6 +6,11 @@ body {
     
 }
 
+header > h2 {
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 h4 {
   border: 1px solid black;
   background-color: blue;
