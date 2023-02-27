@@ -50,35 +50,28 @@ const arrayOfPokemons = [
   },
 ];
 
-console.log(arrayOfPokemons);
-
 // Writing for the first pokemon all the elemnts by order: first div then button, img, p, h3, h4, h4
-const DOMobject = document.createElement("div");
-document.body.appendChild(DOMobject);
-DOMobject.id = "container1";
 
-const DOMbtn = document.createElement("button");
-document.getElementById("container1").appendChild(DOMbtn);
-DOMbtn.id = "balbasaurbtn";
+//First create an empty div element
+const div = document.createElement("div");
+document.body.appendChild(div);
+div.id = "container1";
 
-const DOMimg = document.createElement("img");
-document.getElementById("balbasaurbtn").appendChild(DOMimg);
-DOMimg.id = "balbasaur-image";
-DOMimg.src = "media/001.png";
+//instead of repeating document.getElementById("container1") I can just put it on a variable:
+const containerElement = document.getElementById("container1");
+//create element
+let createElement = document.createElement("element");
+//append element into the container
+let appendEleemnt = containerElement.appendChild(element);
+//which elements we need for each pokemon: img , p, h3, h4, h4
+//img src is thumbnail
+// p is id
+// h3 is name
+// h4, h4 is type
 
-const DOMp = document.createElement("p");
-document.getElementById("container1").appendChild(DOMp);
-DOMp.id = "number";
-DOMp.innerHTML = "N°001";
-
-const DOMh3 = document.createElement("h3");
-document.getElementById("container1").appendChild(DOMh3);
-DOMh3.innerHTML = "Bulbasaur";
-
-const DOMh4 = document.createElement("h4");
-document.getElementById("container1").appendChild(DOMh4);
-DOMh4.innerHTML = "Plant";
-
-const DOMotherh4 = document.createElement("h4");
-document.getElementById("container1").appendChild(DOMotherh4);
-DOMotherh4.innerHTML = "Poison";
+for (let index = 0; index < arrayOfPokemons.length; index++) {
+  const element = arrayOfPokemons[index];
+  const containerElement = document.getElementById("container1");
+  let createElement = document.createElement("element");
+  let appendEleemnt = containerElement.appendChild(element);
+}
