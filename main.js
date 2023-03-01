@@ -106,3 +106,14 @@ for (let index = 0; index < arrayOfPokemons.length; index++) {
   imageBtn.appendChild(image);
 }
 
+const buttonAlert = document.getElementsByClassName("imageBtn-classname");
+function MyFunction() {
+  alert(arrayOfPokemons[index].clickMessage);
+}
+button.addEventListener("click", buttonAlert);
+
+for (let index = 0; index < arrayOfPokemons.length; index++) {
+  const alertMessage = arrayOfPokemons[index].clickMessage;
+  
+}
+
