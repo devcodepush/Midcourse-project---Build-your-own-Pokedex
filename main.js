@@ -58,11 +58,13 @@ const arrayOfPokemons = [
   },
 ];
 
+
+// section Element >> all the Elements are nested inside of it
 const mainContainer = document.createElement("section");
 mainContainer.id = "mainContainer-id";
 document.body.appendChild(mainContainer);
   
-
+// A loop method for creating all elements and appending all of them. I am using here arrayOfPokemons as a databox
 for (let index = 0; index < arrayOfPokemons.length; index++) {
   const cardDiv = document.createElement("div");
   cardDiv.className = "cardDiv-classname";
@@ -95,6 +97,7 @@ for (let index = 0; index < arrayOfPokemons.length; index++) {
   h4SecondElement.textContent = arrayOfPokemons[index].type[1];
   h4SecondElement.className = "h4Second-classname";
 
+  //append all created elements 
   mainContainer.appendChild(cardDiv);
   cardDiv.append(
     imageBtn,
