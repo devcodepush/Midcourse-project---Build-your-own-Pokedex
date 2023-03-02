@@ -58,15 +58,10 @@ const arrayOfPokemons = [
   },
 ];
 
-//which elements we need for each pokemon: button, img , p, h3, h4, h4
-//img src is thumbnail
-// p is id
-// h3 is name
-// h4, h4 is type
-
 const mainContainer = document.createElement("section");
 mainContainer.id = "mainContainer-id";
 document.body.appendChild(mainContainer);
+  
 
 for (let index = 0; index < arrayOfPokemons.length; index++) {
   const cardDiv = document.createElement("div");
@@ -74,6 +69,11 @@ for (let index = 0; index < arrayOfPokemons.length; index++) {
 
   const imageBtn = document.createElement("button");
   imageBtn.className = "imageBtn-classname";
+  const message = arrayOfPokemons[index].clickMessage;
+  imageBtn.addEventListener("click", function () {
+    alert(message);
+  });
+
 
   const image = document.createElement("img");
   image.className = "image-classname";
@@ -104,16 +104,14 @@ for (let index = 0; index < arrayOfPokemons.length; index++) {
     h4SecondElement
   );
   imageBtn.appendChild(image);
+
 }
 
-const buttonAlert = document.getElementsByClassName("imageBtn-classname");
-function MyFunction() {
-  alert(arrayOfPokemons[index].clickMessage);
-}
-button.addEventListener("click", buttonAlert);
 
-for (let index = 0; index < arrayOfPokemons.length; index++) {
-  const alertMessage = arrayOfPokemons[index].clickMessage;
-  
-}
+
+
+
+
+
+
 
