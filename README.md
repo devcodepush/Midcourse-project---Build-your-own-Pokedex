@@ -3,6 +3,9 @@
 In this midcourse project, you'll need to build a Pokedex.
 <img src="https://github.com/armanpartovi/Midcourse-project---Build-your-own-Pokedex/blob/main/media/pokemon_logo.png" alt="Alt text" title="Optional title">
 
+## GitHub page
+Click [HERE](https://armanpartovi.github.io/Midcourse-project---Build-your-own-Pokedex/) to see the link to the repo.
+
 ## Getting Started
 
 ### Prerequisites
