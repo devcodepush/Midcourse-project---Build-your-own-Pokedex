@@ -1,79 +1,86 @@
 body {
-  font-size: 10px;
+  font-size: 1.6rem; /* set font size to 16px */
   background-color: rgba(220, 215, 250, 0.199);
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  padding: 40px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  padding: 2rem; /* set padding to 20px */
+  margin: 0; /* remove default margin */
+  box-sizing: border-box; /* include padding and border in width and height calculation */
 }
 
-header > h2 {
-  text-align: center;
+/* use a media query to adjust font size on smaller screens */
+@media screen and (max-width: 600px) {
+  body {
+    font-size: 1.4rem; /* set font size to 14px */
+  }
+}
+
+header {
+  text-align: center; /* center header text */
+  margin-bottom: 2rem; /* add margin to bottom of header */
+}
+
+header h2 {
   font-family: cursive;
-  font-size: 18px;
+  font-size: 2rem; /* set font size to 20px */
+  margin: 0; /* remove default margin */
 }
 
 .color-change-5x {
-	-webkit-animation: color-change-5x 8s 2s infinite alternate forwards;
-	        animation: color-change-5x 8s 2s infinite alternate forwards;
+  animation: color-change-5x 8s 2s infinite alternate forwards;
 }
 
-@-webkit-keyframes color-change-5x {
-    0% {
-      background: #19dcea;
-    }
-    25% {
-      background: #b22cff;
-    }
-    50% {
-      background: #ea2222;
-    }
-    75% {
-      background: #f5be10;
-    }
-    100% {
-      background: #3bd80d;
-    }
+@keyframes color-change-5x {
+  0% {
+    background: #19dcea;
   }
-  @keyframes color-change-5x {
-    0% {
-      background: #19dcea;
-    }
-    25% {
-      background: #b22cff;
-    }
-    50% {
-      background: #ea2222;
-    }
-    75% {
-      background: #f5be10;
-    }
-    100% {
-      background: #3bd80d;
-    }
+  25% {
+    background: #b22cff;
   }
+  50% {
+    background: #ea2222;
+  }
+  75% {
+    background: #f5be10;
+  }
+  100% {
+    background: #3bd80d;
+  }
+}
 
 .image-classname {
-  width: 100px;
-  border: 1px solid rgb(111, 0, 255);
+  width: 10rem; /* set image width to 100px */
+  height: 10rem; /* set image height to 100px */
+  border: 0.1rem solid rgb(111, 0, 255); /* set border width to 1px */
   border-radius: 50%;
   background-color: #1302ff;
+  margin: 0 auto; /* center image horizontally */
 }
 
 .imageBtn-classname {
   background-color: black;
   border-radius: 90%;
+  display: block; /* make button a block element */
+  margin: 0 auto 2rem; /* center button and add margin to bottom */
+  width: 4rem; /* set button width to 40px */
+  height: 4rem; /* set button height to 40px */
 }
 
 .cardDiv-classname {
-  margin: 0 auto;
+  margin: 0 auto 2rem; /* center card div and add margin to bottom */
+  max-width: 30rem; /* set max width for card div */
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); /* add box shadow */
+  border-radius: 0.5rem; /* add border radius */
 }
 
-.h4First-classname, .h4Second-classname {
+.h4First-classname,
+.h4Second-classname {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  border: 0.1px solid black;
+  font-size: 1.2rem; /* set font size to 12px */
+  border: 0.1rem solid black; /* set border width to 1px */
   background-color: rgb(255, 0, 64);
   color: white;
   border-radius: 50%;
+  padding: 0.5rem;
 }
 
 .p-classname, .h3Element-classname, .h4First-classname, .h4Second-classname {
@@ -95,5 +102,5 @@ header > h2 {
 }
 
 #mainContainer-id {
-  display: flex;
+  display: flex
 }
