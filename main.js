@@ -1,95 +1,115 @@
-// Define the data for all Pokemons as an array of objects
+//Data of all Pokemons on one array
 const arrayOfPokemons = [
   {
     thumbnail: "media/001.png",
     id: "N°001",
-    name: "Bulbasaur",
+    name: "BALBASAUR",
     type: ["Plant", "Poison"],
     clickMessage: "Bulbasaur is effective against water and rock-type Pokemon",
   },
   {
     thumbnail: "media/002.png",
     id: "N°002",
-    name: "Charmander",
-    type: ["Fire"],
-    clickMessage: "Charmander is known for the flame on its tail indicating life force; if it is healthy, the flame burns brightly.",
+    name: "CHARMANDER",
+    type: ["Charmander", "Fire"],
+    clickMessage: "Bulbasaur is effective against water and rock-type Pokemon",
   },
   {
     thumbnail: "media/003.png",
     id: "N°003",
-    name: "Caterpie",
-    type: ["Bug"],
-    clickMessage: "Caterpie is known for its voracious appetite. It will often eat leaves twice as big as its own body and after its appetite is sated it will shed its skin. It molts several times before it evolves to its next phase.",
+    name: "CATERPIE",
+    type: ["Caterpie", "Bug"],
+    clickMessage: "",
   },
   {
     thumbnail: "media/004.png",
     id: "N°004",
-    name: "Kakuna",
+    name: "KAKUNA",
     type: ["Bug", "Poison"],
-    clickMessage: "Kakuna is a Bug/Poison type Pokémon introduced in Generation 1 . It is known as the Cocoon Pokémon",
+    clickMessage: "",
   },
   {
     thumbnail: "media/005.png",
     id: "N°005",
-    name: "Rattata",
-    type: ["Normal"],
-    clickMessage: "Bites anything when it attacks. Small and very quick, it is a common sight in many places.",
+    name: "RATATA",
+    type: ["Ratata", "Normal"],
+    clickMessage: "",
   },
   {
     thumbnail: "media/006.png",
     id: "N°006",
-    name: "Pikachu",
-    type: ["Electrical"],
-    clickMessage: "Pikachu is widely considered to be the most popular and well-known Pokémon species, largely due to its appearance in the Pokémon anime television series as the companion of protagonist Ash Ketchum",
+    name: "PIKACHU",
+    type: ["Pikachu", "Electrical"],
+    clickMessage: "",
   },
   {
     thumbnail: "media/007.png",
     id: "N°007",
-    name: "Vulpix",
-    type: ["Fire"],
-    clickMessage: "Vulpix is known to feign injury to escape from opponents too powerful for it to defeat.",
+    name: "VULPIX",
+    type: ["Vulpix", "Fire"],
+    clickMessage: "",
   },
   {
     thumbnail: "media/008.png",
     id: "N°008",
-    name: "Jigglypuff",
+    name: "JIGGLYPUFF",
     type: ["Normal", "Fairy"],
-    clickMessage: "Jigglypuff are characterized by putting their enemies to sleep by singing a lullaby. Before beginning to sing, they mesmerize the opponent with their soft, glowing eyes and, if they inflate themselves, they can sing for longer periods of time.",
+    clickMessage: "",
   },
 ];
+
+//which elements we need for each pokemon: button, img , p, h3, h4, h4
+//img src is thumbnail
+// p is id
+// h3 is name
+// h4, h4 is type
 
 const mainContainer = document.createElement("section");
 mainContainer.id = "mainContainer-id";
 document.body.appendChild(mainContainer);
 
-arrayOfPokemons.forEach(pokemon => {
+for (let index = 0; index < arrayOfPokemons.length; index++) {
   const cardDiv = document.createElement("div");
-  cardDiv.classList.add("cardDiv-classname");
+  cardDiv.className = "cardDiv-classname";
 
   const imageBtn = document.createElement("button");
-  imageBtn.classList.add("imageBtn-classname");
-  imageBtn.addEventListener("click", () => alert(pokemon.clickMessage));
-
-  const image = new Image();
-  image.classList.add("image-classname");
-  image.src = pokemon.thumbnail;
+  imageBtn.className = "imageBtn-classname";
+  const image = document.createElement("img");
+  image.className = "image-classname";
+  image.src = arrayOfPokemons[index].thumbnail;
 
   const paragraph = document.createElement("p");
-  paragraph.textContent = pokemon.id;
-  paragraph.classList.add("p-classname");
+  paragraph.textContent = arrayOfPokemons[index].id;
+  paragraph.className = "p-classname";
 
   const h3Element = document.createElement("h3");
-  h3Element.textContent = pokemon.name;
-  h3Element.classList.add("h3Element-classname");
+  h3Element.textContent = arrayOfPokemons[index].name;
+  h3Element.className = "h3Element-classname";
 
-  const types = pokemon.type.map(type => {
-    const h4 = document.createElement("h4");
-    h4.textContent = type;
-    h4.classList.add("h4-classname");
-    return h4;
-  });
+  const h4FirstElement = document.createElement("h4");
+  h4FirstElement.textContent = arrayOfPokemons[index].type[0];
+  h4FirstElement.className = "h4First-classname";
+
+  const h4SecondElement = document.createElement("h4");
+  h4SecondElement.textContent = arrayOfPokemons[index].type[1];
+  h4SecondElement.className = "h4Second-classname";
 
   mainContainer.appendChild(cardDiv);
-  cardDiv.append(imageBtn, paragraph, h3Element, ...types);
+  cardDiv.append(
+    imageBtn,
+    paragraph,
+    h3Element,
+    h4FirstElement,
+    h4SecondElement
+  );
   imageBtn.appendChild(image);
-});
+}
+
+for (let index = 0; index < arrayOfPokemons.length; index++) {
+  const alertBtn = document.getElementsByClassName("imageBtn");
+  const alertMessage = arrayOfPokemons[index].clickMessage;
+  function alertFunction() {
+    alert(alertMessage);
+  }
+  alertBtn.addEventListener("click", alertMessage);
+}
