@@ -55,13 +55,8 @@ git clone https://github.com/your_username_/Midcourse-project---Build-your-own-P
 
 2. Open index.html with your preferred web browser
 
-Usage
-Click on each Pokemon card to display more information about that Pokemon
-Hover over each Pokemon card to see the hover effect (bonus point)
-Interact with the "Total caught" button to keep track of how many Pokemons you have caught
-
 ### Contributing
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated.
+Contributions you make are greatly appreciated.
 
 Fork the Project
 
@@ -70,6 +65,4 @@ Fork the Project
 3. Push to the Branch (git push origin feature/AmazingFeature)
 4. Open a Pull Request
 
-### Contact
-- Arman Partovi - @armanpartovi
-- Project Link: https://github.com/armanpartovi/Midcourse-project---Build-your-own-Pokedex
+
