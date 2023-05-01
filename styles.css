@@ -1,106 +1,214 @@
+/* The body has a padding-bottom of 70px, a background image, and left and right padding of 100px.
+ */
 body {
-    padding-bottom: 70px;
-    background-image: url(media/container_bg.png);
-    padding-left: 100px;
-    padding-right: 100px;
-    ;
+  padding-bottom: 70px;
+  background-image: url(media/container_bg.png);
+  padding-left: 100px;
+  padding-right: 100px;
 }
 
+/* The figure element contains two images, the Pokemon logo and a Pokeball, which are centered vertically and horizontally using flexbox.
+ */
 figure {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
-
+/* The #pokemonlogo-image has an animation that slides in from the right over 4 seconds and a width of 550px.
+ */
 @keyframes slideInFromRight {
-    0% {
-      margin-right: -100%;
-    }
-    100% {
-      margin-right: 0;
-    }
-  }
-  
-#pokemonlogo-image {
-    animation: slideInFromRight 4s ease-in-out;
-    z-index: 1;
-    width: 550px;
+  0% {
+    margin-right: -100%;
   }
 
-  @keyframes moveDown {
-    0% {
-      transform: translateY(-100%);
-    }
-    100% {
-      transform: translateY(0);
-    }
+  100% {
+    margin-right: 0;
   }
+}
+
+#pokemonlogo-image {
+  animation: slideInFromRight 4s ease-in-out;
+  z-index: 1;
+  width: 550px;
+}
+
+/*   The #pokeball-image has an animation that moves down over 5 seconds, a width of 100px, and is positioned at the bottom and centered horizontally.
+ */
+@keyframes moveDown {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
 
 #pokeball-image {
-    width: 100px;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    z-index: 1;
-    transform: translateX(-50%);
-    animation: moveDown 5s ease-in-out forwards;
+  width: 100px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  z-index: 1;
+  transform: translateX(-50%);
+  animation: moveDown 5s ease-in-out forwards;
 }
 
+/* The #pokemons-container displays a grid of Pokemon cards with four columns and a 20px gap between them. The cards are centered horizontally and vertically using grid properties.
+ */
 #pokemons-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    align-items: center;
-    justify-items: center;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  align-items: center;
+  justify-items: center;
 }
 
+/* The .pokemon-card has a margin of 15px, padding of 5px, a background color with opacity, and a transform transition on hover to scale up by 1.05.
+ */
 .pokemon-card {
-    margin: 15px;
-    padding: 5px;
-    background-color: rgba(38, 0, 255, 0.007);
-    transition: transform 0.2s ease-in-out;
+  margin: 15px;
+  padding: 5px;
+  background-color: rgba(38, 0, 255, 0.007);
+  transition: transform 0.2s ease-in-out;
 }
 
 .pokemon-card:hover {
-    cursor: pointer;
-    transform: scale(1.05);
+  cursor: pointer;
+  transform: scale(1.05);
 }
 
+/* The #pokemon-id displays the Pokemon ID, font size of 15px, and gray color.
+ */
 #pokemon-id {
-    font-size: 15px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: grey;
-    text-align: left;
-    margin: 0 auto;
+  font-size: 15px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: grey;
+  text-align: left;
+  margin: 0 auto;
 }
 
+/* The #pokemon-name displays the Pokemon name, font size of 20px, and uses a specific font family.
+ */
 #pokemon-name {
-    font-size: 20px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 20px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
+/* The #pokemon-image has a rounded border and a background color with opacity.
+ */
 #pokemon-image {
-    background-color: rgba(128, 128, 128, 0.377);
-    border-radius: 20px;
+  background-color: rgba(128, 128, 128, 0.377);
+  border-radius: 20px;
 }
 
+/* The #pokemon-button1 and #pokemon-button2 are buttons that have a width of 70px, a border radius, and padding. They have different background colors, no border, and white text.
+ */
 #pokemon-button1 {
-    width: 70px;
-    background-color: rgb(16, 0, 241);
-    border-radius: 4px;
-    border: none;
-    padding: 5px;
-    color: White;
+  width: 70px;
+  background-color: rgb(16, 0, 241);
+  border-radius: 4px;
+  border: none;
+  padding: 5px;
+  color: White;
 }
 
 #pokemon-button2 {
-    width: 70px;
-    background-color: rgb(240, 45, 10);
-    border-radius: 4px;
-    border: none;
-    padding: 5px;
-    color: White;
+  width: 70px;
+  background-color: rgb(240, 45, 10);
+  border-radius: 4px;
+  border: none;
+  padding: 5px;
+  color: White;
+}
+
+/* The media queries adjust the styles for devices with different screen widths. For tablets, the padding and font sizes change, and the number of columns in the grid is reduced. For smartphones, the changes are more significant, with smaller sizes for the logo, Pokeball, cards, and buttons, and only two columns in the grid.
+ */
+
+/* Styles for iPads and tablets */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  body {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  #pokemonlogo-image {
+    width: 350px;
+  }
+
+  #pokeball-image {
+    width: 80px;
+  }
+
+  #pokemons-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .pokemon-card {
+    margin: 20px;
+    padding: 10px;
+  }
+
+  #pokemon-id {
+    font-size: 18px;
+  }
+
+  #pokemon-name {
+    font-size: 24px;
+  }
+
+  #pokemon-image {
+    height: 200px;
+  }
+
+  #pokemon-button1,
+  #pokemon-button2 {
+    width: 80px;
+    font-size: 18px;
+  }
+}
+
+/* Styles for smartphones */
+@media only screen and (max-width: 767px) {
+  body {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  #pokemonlogo-image {
+    width: 250px;
+  }
+
+  #pokeball-image {
+    width: 50px;
+  }
+
+  #pokemons-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .pokemon-card {
+    margin: 10px;
+  }
+
+  #pokemon-id {
+    font-size: 12px;
+  }
+
+  #pokemon-name {
+    font-size: 16px;
+  }
+
+  #pokemon-image {
+    height: 150px;
+  }
+
+  #pokemon-button1,
+  #pokemon-button2 {
+    width: 50px;
+    font-size: 12px;
+  }
 }

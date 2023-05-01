@@ -1,3 +1,4 @@
+// Define an array of Pokemon objects, each containing information about a Pokemon
 const Pokemon = [
   {
     thumbnail: "media/001.png",
@@ -97,22 +98,27 @@ const Pokemon = [
   },
 ];
 
+// Create a new div element to hold the Pokemon cards and set its id to "pokemons-container"
 const pokemonsContainer = document.createElement("div");
 pokemonsContainer.id = "pokemons-container";
 document.body.appendChild(pokemonsContainer);
 
+// Loop through each Pokemon in the Pokemon array
 for (let i = 0; i < Pokemon.length; i++) {
   const pokemon = Pokemon[i];
 
+  // Create a new div element to hold the information about the current Pokemon
   const pokemonCard = document.createElement("div");
   pokemonCard.classList.add("pokemon-card");
-  pokemonCard.innerHTML = ` 
+  pokemonCard.innerHTML = `
       <img id="pokemon-image" src="${pokemon.thumbnail}" alt="${pokemon.name}">
       <h3 id="pokemon-id">${pokemon.id}</h3>
       <h3 id="pokemon-name">${pokemon.name}</h3>
       <button id="pokemon-button1">${pokemon.type[0]}</button>
+      // Conditionally create a second button if the current Pokemon has a second type
       ${pokemon.type[1] ? `<button id="pokemon-button2">${pokemon.type[1]}</button>` : ''} 
   `
 
+  // Append the Pokemon card to the "pokemons-container" div
   pokemonsContainer.appendChild(pokemonCard);
 }
