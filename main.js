@@ -1,115 +1,118 @@
-//Data of all Pokemons on one array
-const arrayOfPokemons = [
+const Pokemon = [
   {
     thumbnail: "media/001.png",
     id: "N°001",
     name: "BALBASAUR",
-    type: ["Plant", "Poison"],
-    clickMessage: "Bulbasaur is effective against water and rock-type Pokemon",
+    type: ["Grass", "Poison"],
   },
   {
     thumbnail: "media/002.png",
     id: "N°002",
     name: "CHARMANDER",
-    type: ["Charmander", "Fire"],
-    clickMessage: "Bulbasaur is effective against water and rock-type Pokemon",
+    type: ["Fire"],
   },
   {
     thumbnail: "media/003.png",
     id: "N°003",
     name: "CATERPIE",
-    type: ["Caterpie", "Bug"],
-    clickMessage: "",
+    type: ["Bug"],
   },
   {
     thumbnail: "media/004.png",
     id: "N°004",
     name: "KAKUNA",
     type: ["Bug", "Poison"],
-    clickMessage: "",
   },
   {
     thumbnail: "media/005.png",
     id: "N°005",
     name: "RATATA",
-    type: ["Ratata", "Normal"],
-    clickMessage: "",
+    type: ["Normal"],
   },
   {
     thumbnail: "media/006.png",
     id: "N°006",
     name: "PIKACHU",
-    type: ["Pikachu", "Electrical"],
-    clickMessage: "",
+    type: ["Electric"],
   },
   {
     thumbnail: "media/007.png",
     id: "N°007",
     name: "VULPIX",
-    type: ["Vulpix", "Fire"],
-    clickMessage: "",
+    type: ["Fire"],
   },
   {
     thumbnail: "media/008.png",
     id: "N°008",
     name: "JIGGLYPUFF",
     type: ["Normal", "Fairy"],
-    clickMessage: "",
+  },
+  {
+    thumbnail: "media/009.png",
+    id: "N°009",
+    name: "Diglett",
+    type: ["Ground"],
+  },
+  {
+    thumbnail: "media/010.png",
+    id: "N°010",
+    name: "Meowth",
+    type: ["Normal"],
+  },
+  {
+    thumbnail: "media/011.png",
+    id: "N°011",
+    name: "Tentacruel",
+    type: ["Water", "Poison"],
+  },
+  {
+    thumbnail: "media/012.png",
+    id: "N°012",
+    name: "Ponyta",
+    type: ["Fire"],
+  },
+  {
+    thumbnail: "media/013.png",
+    id: "N°013",
+    name: "Cloyster",
+    type: ["Water", "Ice"],
+  },
+  {
+    thumbnail: "media/014.png",
+    id: "N°014",
+    name: "Cubone",
+    type: ["Ground"],
+  },
+  {
+    thumbnail: "media/015.png",
+    id: "N°015",
+    name: "Eevee",
+    type: ["Normal"],
+  },
+  {
+    thumbnail: "media/016.png",
+    id: "N°016",
+    name: "Archen",
+    type: ["Rock", "Flying"],
   },
 ];
 
-//which elements we need for each pokemon: button, img , p, h3, h4, h4
-//img src is thumbnail
-// p is id
-// h3 is name
-// h4, h4 is type
+const pokemonsContainer = document.createElement("div");
+pokemonsContainer.id = "pokemons-container";
+document.body.appendChild(pokemonsContainer);
 
-const mainContainer = document.createElement("section");
-mainContainer.id = "mainContainer-id";
-document.body.appendChild(mainContainer);
+for (let i = 0; i < Pokemon.length; i++) {
+  const pokemon = Pokemon[i];
 
-for (let index = 0; index < arrayOfPokemons.length; index++) {
-  const cardDiv = document.createElement("div");
-  cardDiv.className = "cardDiv-classname";
+  const pokemonCard = document.createElement("div");
+  pokemonCard.classList.add("pokemon-card");
+  pokemonCard.innerHTML = ` 
+      <img id="pokemon-image" src="${pokemon.thumbnail}" alt="${pokemon.name}">
+      <h3 id="pokemon-id">${pokemon.id}</h3>
+      <h3 id="pokemon-name">${pokemon.name}</h3>
+      <button id="pokemon-button1">${pokemon.type[0]}</button>
+      ${pokemon.type[1] ? `<button id="pokemon-button2">${pokemon.type[1]}</button>` : ''} 
+  `
 
-  const imageBtn = document.createElement("button");
-  imageBtn.className = "imageBtn-classname";
-  const image = document.createElement("img");
-  image.className = "image-classname";
-  image.src = arrayOfPokemons[index].thumbnail;
-
-  const paragraph = document.createElement("p");
-  paragraph.textContent = arrayOfPokemons[index].id;
-  paragraph.className = "p-classname";
-
-  const h3Element = document.createElement("h3");
-  h3Element.textContent = arrayOfPokemons[index].name;
-  h3Element.className = "h3Element-classname";
-
-  const h4FirstElement = document.createElement("h4");
-  h4FirstElement.textContent = arrayOfPokemons[index].type[0];
-  h4FirstElement.className = "h4First-classname";
-
-  const h4SecondElement = document.createElement("h4");
-  h4SecondElement.textContent = arrayOfPokemons[index].type[1];
-  h4SecondElement.className = "h4Second-classname";
-
-  mainContainer.appendChild(cardDiv);
-  cardDiv.append(
-    imageBtn,
-    paragraph,
-    h3Element,
-    h4FirstElement,
-    h4SecondElement
-  );
-  imageBtn.appendChild(image);
-}
-
-for (let index = 0; index < arrayOfPokemons.length; index++) {
-  const alertBtn = document.getElementsByClassName("imageBtn");
-  const alertMessage = arrayOfPokemons[index].clickMessage;
-  function alertFunction() {
-    alert(alertMessage);
-  }
-  alertBtn.addEventListener("click", alertMessage);
+  pokemonsContainer.appendChild(pokemonCard);
 }
