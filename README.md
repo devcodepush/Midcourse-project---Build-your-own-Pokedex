@@ -1,10 +1,14 @@
-# Build your own Pokedex
+# Hi! 👋
+
+## 🚀 Build your own Pokedex
+
+Click [HERE](https://devcodepush.github.io/Midcourse-project---Build-your-own-Pokedex/) to see the GiHub page of this repo.
+
+
+## Getting started 
 
 In this midcourse project, you'll need to build a Pokedex.
 <img src="https://github.com/armanpartovi/Midcourse-project---Build-your-own-Pokedex/blob/main/media/pokemon_logo.png" alt="Alt text" title="Optional title">
-
-## GitHub page
-Click [HERE](https://devcodepush.github.io/Midcourse-project---Build-your-own-Pokedex/) to see the link to the repo.
 
 ### Installing
 
@@ -38,24 +42,4 @@ Try to make that hover effect when the cursor is pointing each one of the cards.
 If you feel creative, try to reproduce the same animation you see on the Gif from above. Even though there are multiple ways of doing this, a good option is to use the CSS selector @keyframes.
 Getting Started
 To get a local copy up and running follow these simple steps.
-
-
-### Installation
-
-1. Clone the repo
-
-git clone https://github.com/your_username_/Midcourse-project---Build-your-own-Pokedex.git
-
-2. Open index.html with your preferred web browser
-
-### Contributing
-Contributions you make are greatly appreciated.
-
-Fork the Project
-
-1. Create your Feature Branch (git checkout -b feature/AmazingFeature)
-2. Commit your Changes (git commit -m 'Add some AmazingFeature')
-3. Push to the Branch (git push origin feature/AmazingFeature)
-4. Open a Pull Request
-
 
