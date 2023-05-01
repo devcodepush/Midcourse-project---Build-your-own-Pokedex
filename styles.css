@@ -127,4 +127,89 @@ figure {
 
 /* The media queries adjust the styles for devices with different screen widths. For tablets, the padding and font sizes change, and the number of columns in the grid is reduced. For smartphones, the changes are more significant, with smaller sizes for the logo, Pokeball, cards, and buttons, and only two columns in the grid.
  */
+
+ /* Styles for iPads and tablets */
+@media (min-width: 768px) and (max-width: 1024px) {
+  body {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  #pokemonlogo-image {
+    width: 350px;
+  }
+
+  #pokeball-image {
+    width: 80px;
+  }
+
+  #pokemons-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .pokemon-card {
+    margin: 20px;
+    padding: 10px;
+  }
+
+  #pokemon-id {
+    font-size: 18px;
+  }
+
+  #pokemon-name {
+    font-size: 24px;
+  }
+
+  #pokemon-image {
+    height: 200px;
+  }
+
+  #pokemon-button1,
+  #pokemon-button2 {
+    width: 80px;
+    font-size: 18px;
+  }
+}
+
+/* Styles for smartphones */
+@media (max-width: 767px) {
+  body {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  #pokemonlogo-image {
+    width: 250px;
+  }
+
+  #pokeball-image {
+    width: 50px;
+  }
+
+  #pokemons-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .pokemon-card {
+    margin: 10px;
+  }
+
+  #pokemon-id {
+    font-size: 12px;
+  }
+
+  #pokemon-name {
+    font-size: 16px;
+  }
+
+  #pokemon-image {
+    height: 150px;
+  }
+
+  #pokemon-button1,
+  #pokemon-button2 {
+    width: 50px;
+    font-size: 12px;
+  }
+}
  
