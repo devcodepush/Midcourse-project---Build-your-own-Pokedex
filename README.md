@@ -1,10 +1,18 @@
+<<<<<<< HEAD
 **# # Build your own Pokedex
+=======
+# Hi! 👋
+
+## 🚀 Build your own Pokedex
+
+Click [HERE](https://devcodepush.github.io/Midcourse-project---Build-your-own-Pokedex/) to see the GiHub page of this repo.
+
+
+## Getting started 
+>>>>>>> cc17d59c107f0316e4d1fda0f5cf85e89365bdb0
 
 In this midcourse project, you'll need to build a Pokedex.
 <img src="https://github.com/armanpartovi/Midcourse-project---Build-your-own-Pokedex/blob/main/media/pokemon_logo.png" alt="Alt text" title="Optional title">
-
-## GitHub page
-Click [HERE](https://devcodepush.github.io/Midcourse-project---Build-your-own-Pokedex/) to see the link to the repo.
 
 ### Installing
 
@@ -39,6 +47,7 @@ If you feel creative, try to reproduce the same animation you see on the Gif fro
 Getting Started
 To get a local copy up and running follow these simple steps.
 
+<<<<<<< HEAD
 
 ### Installation
 
@@ -48,3 +57,5 @@ git clone https://github.com/your_username_/Midcourse-project---Build-your-own-P
 
 2. Open index.html with your preferred web browser
 
+=======
+>>>>>>> cc17d59c107f0316e4d1fda0f5cf85e89365bdb0
