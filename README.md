@@ -40,14 +40,3 @@ Try to make that hover effect when the cursor is pointing each one of the cards.
 If you feel creative, try to reproduce the same animation you see on the Gif from above. Even though there are multiple ways of doing this, a good option is to use the CSS selector @keyframes.
 Getting Started
 To get a local copy up and running follow these simple steps.
-
-<<<<<<< HEAD
-
-### Installation
-
-1. Clone the repo
-
-git clone https://github.com/your_username_/Midcourse-project---Build-your-own-Pokedex.git
-
-2. Open index.html with your preferred web browser
-
