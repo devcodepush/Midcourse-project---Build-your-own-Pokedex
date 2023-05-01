@@ -107,7 +107,8 @@ document.body.appendChild(pokemonsContainer);
 for (let i = 0; i < Pokemon.length; i++) {
   const pokemon = Pokemon[i];
 
-  // Create a new div element to hold the information about the current Pokemon
+  /* Create a new div element to hold the information about the current Pokemon
+   */
   const pokemonCard = document.createElement("div");
   pokemonCard.classList.add("pokemon-card");
   pokemonCard.innerHTML = `
@@ -115,10 +116,8 @@ for (let i = 0; i < Pokemon.length; i++) {
       <h3 id="pokemon-id">${pokemon.id}</h3>
       <h3 id="pokemon-name">${pokemon.name}</h3>
       <button id="pokemon-button1">${pokemon.type[0]}</button>
-      // Conditionally create a second button if the current Pokemon has a second type
-      ${pokemon.type[1] ? `<button id="pokemon-button2">${pokemon.type[1]}</button>` : ''} 
+       ${pokemon.type[1] ? `<button id="pokemon-button2">${pokemon.type[1]}</button>` : ''} 
   `
 
-  // Append the Pokemon card to the "pokemons-container" div
   pokemonsContainer.appendChild(pokemonCard);
 }
