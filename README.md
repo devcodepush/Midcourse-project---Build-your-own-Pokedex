@@ -7,7 +7,7 @@ Click [HERE](https://devcodepush.github.io/Midcourse-project---Build-your-own-Po
 
 In this midcourse project, you'll need to build a Pokedex.
 
-[![Watch the video](https://youtu.be/kc8_JLlr5V0)
+[![Alt Text](https://img.youtube.com/vi/dQw4w9WgXcQ/0.jpg)](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
 
 
 ### Installing
