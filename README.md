@@ -2,12 +2,9 @@
 
 Click [HERE](https://devcodepush.github.io/Midcourse-project---Build-your-own-Pokedex/) to see the GiHub page of this repo.
 
+## Video Tour of Live GitHub Webpage
 
-## Getting started 
-
-In this midcourse project, you'll need to build a Pokedex.
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/kc8_JLlr5V0?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+https://user-images.githubusercontent.com/118768601/235753374-c8573405-fba7-462d-b0a8-125e0b2a8669.mp4
 
 
 ### Installing
