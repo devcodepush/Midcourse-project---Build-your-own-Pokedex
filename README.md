@@ -1,4 +1,4 @@
-## 🚀 Build your own Pokedex
+## 🚀 Build your own Pokedex Github Page
 
 Click [HERE](https://devcodepush.github.io/Midcourse-project---Build-your-own-Pokedex/) to see the GiHub page of this repo.
 
