@@ -6,7 +6,9 @@ Click [HERE](https://devcodepush.github.io/Midcourse-project---Build-your-own-Po
 ## Getting started 
 
 In this midcourse project, you'll need to build a Pokedex.
-<img src="https://github.com/armanpartovi/Midcourse-project---Build-your-own-Pokedex/blob/main/media/pokemon_logo.png" alt="Alt text" title="Optional title">
+
+[![Watch the video](https://youtu.be/kc8_JLlr5V0)
+
 
 ### Installing
 
